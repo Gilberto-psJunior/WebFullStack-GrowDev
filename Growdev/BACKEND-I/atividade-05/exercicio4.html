@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <main>
+        <script>
+            /*
+            Numa promoção exclusiva para o Dia da Mulher, uma loja quer dar
+           descontos para todos, mas especialmente para mulheres. Faça um
+             programa que leia nome, sexo e o valor das compras do cliente e
+             calcule o preço com desconto. Sabendo que:
+            a. Homens ganham 5% de desconto
+             / b. Mulheres ganham 13% de desconto
+            */
+
+const nome=prompt("digite o nome");
+const sexo = prompt("digite o sexo M para mulher H para homem").toUpperCase();
+let valorCompra = 0;
+let desconto=0;
+do{
+const valorItem= Number(prompt("digite o valor do item"))
+valorCompra+=valorItem;
+
+}
+while(confirm("deseja continuar?"))
+if (sexo=="M") {
+    desconto=5;  
+}
+else {
+    desconto=13;
+}
+const valorDesconto=(valorCompra * desconto)/100
+document.write(valorCompra-valorDesconto);
+
+
+ 
+
+        </script>
+    </main>
+</body>
+</html>

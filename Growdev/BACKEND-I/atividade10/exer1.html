@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        Crie uma função que recebe 3 notas de um aluno por parâmetro e
+uma letra. Se a letra for A a função deve calcular a média aritmética,
+se for P, a média ponderada (peso: 5, 3 e 2).
+
+        */
+
+
+        function media(n1,n2,n3,midia) {
+            
+            if (midia=="a") {
+
+                mediaA=(n1+n2+n3)/3;
+                return mediaA;
+            }
+            else if (midia == "p"){
+                const mediaP=(5 * n1 + 3 * n2 + 2 * n3) / (5 + 3 + 2);
+                //             25     9      4 /10
+                return mediaP;
+            }
+             
+             
+        }
+n1=8;
+n2=6;
+n3=10;
+midia="a";
+       const media_resultante = media(n1, n2, n3, midia)
+        console.log(media_resultante)
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function converter_tempo(segundos){
+            const horas =  parseInt(segundos / 3600)
+   const minutos = parseInt(segundos / 3600 * 60) 
+    segundos = parseInt(segundos)
+    return[ horas, minutos, segundos]
+        }
+   
+
+
+const tempo_total_segundos = 3672
+const[ horas, minutos, segundos] = converter_tempo(tempo_total_segundos)
+console.log(`${horas} horas, ${minutos} minutos, ${segundos} segundos`);
+
+    </script>
+</body>
+</html>

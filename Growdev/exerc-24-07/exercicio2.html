@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <script>
+        /*
+            Pedro tem 1,50m de altura e cresce 2 centímetros por ano, enquanto
+            Lucas tem 1,10m de altura e cresce 3 centímetros por ano.
+            Construa um algoritmo que calcule e imprima quantos anos serão
+            necessários para que:
+            a. Lucas e Pedro tenham o mesmo tamanho;
+            b. Lucas seja maior que Pedro. */
+
+            function crescimentoPedroLucas() {
+  // Altura inicial de Pedro e Lucas
+  let pedroAltura = 1.50;
+  let lucasAltura = 1.10;
+
+  // Taxa de crescimento anual
+  const pedroCrescimento = 0.02;
+  const lucasCrescimento = 0.03;
+
+  // Contador de anos
+  let anos = 0;
+
+  // Enquanto Lucas não ultrapassar Pedro
+  while (lucasAltura <= pedroAltura) {
+    // Crescimento anual
+    pedroAltura += pedroCrescimento;
+    lucasAltura += lucasCrescimento;
+
+    // Incrementa o contador de anos
+    anos++;
+  }
+
+  // Imprime o resultado para a primeira condição
+  console.log("a. Lucas e Pedro terão o mesmo tamanho em", anos, "anos.");
+
+  // Reinicializa as alturas e o contador de anos
+  pedroAltura = 1.50;
+  lucasAltura = 1.10;
+  anos = 0;
+
+  // Enquanto Lucas não ultrapassar Pedro
+  while (lucasAltura <= pedroAltura) {
+    // Crescimento anual
+    pedroAltura += pedroCrescimento;
+    lucasAltura += lucasCrescimento;
+
+    // Incrementa o contador de anos
+    anos++;
+  }
+
+  // Imprime o resultado para a segunda condição
+  console.log("b. Lucas será maior que Pedro em", anos, "anos.");
+}
+
+// Chamando a função para calcular os resultados
+crescimentoPedroLucas();
+
+            
+
+
+
+      </script>
+    </main>
+  </body>
+</html>

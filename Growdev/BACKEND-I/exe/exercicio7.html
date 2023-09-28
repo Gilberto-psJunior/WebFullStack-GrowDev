@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+       let totalValores=0;
+       somaValores=0;
+       let positivos =0;
+       let negativos=0;
+        for (let i = 0; i <=5; i++) {
+            let nums =Number(prompt("digite um numero")) 
+             somaValores += nums;
+             totalValores++;
+             console.log(somaValores)
+             if(nums > 0) positivos++
+             else negativos++
+        }
+
+        media=somaValores/totalValores
+        console.log(media)
+       const perposi=(totalValores*positivos)/100
+       const percnega=(totalValores*negativos)/100
+       console.log(perposi)
+       console.log(percnega)
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+const pessoas = [];
+
+
+function cadastrarPessoa() {
+    const nome = prompt("Digite o nome da pessoa: ");
+    const idade = parseInt(prompt("Digite a idade da pessoa: "));
+    const trabalhando = prompt("A pessoa está trabalhando? (S para sim, N para não): ").toUpperCase();
+
+    let salario = 0.0;
+    if (trabalhando === "S") {
+        salario = parseFloat(prompt("Digite o salário da pessoa: "));
+    }
+
+    const pessoa = {
+        nome: nome,
+        idade: idade,
+        trabalhando: trabalhando,
+        salario: salario
+    };
+
+    pessoas.push(pessoa);
+}
+
+
+let continuarCadastro = true;
+while (continuarCadastro) {
+    cadastrarPessoa();
+    const resposta = prompt("Deseja continuar cadastrando? (S para sim, N para não): ").toUpperCase();
+    continuarCadastro = resposta === "S";
+}
+
+
+const pessoasDesempregadas = pessoas.filter(pessoa => pessoa.trabalhando === "N");
+console.log("\nPessoas desempregadas:");
+pessoasDesempregadas.forEach(pessoa => {
+    console.log(`Nome: ${pessoa.nome}, Idade: ${pessoa.idade}`);
+});
+
+
+const pessoasMenos2500 = pessoas.filter(pessoa => pessoa.trabalhando === "S" && pessoa.salario < 2500);
+console.log("\nPessoas empregadas com salários menores que 2500:");
+pessoasMenos2500.forEach(pessoa => {
+    console.log(`Nome: ${pessoa.nome}, Idade: ${pessoa.idade}, Salário: ${pessoa.salario}`);
+});
+
+
+const pessoasMaisIgual2500 = pessoas.filter(pessoa => pessoa.trabalhando === "S" && pessoa.salario >= 2500);
+console.log("\nPessoas empregadas com salários maiores ou iguais a 2500:");
+pessoasMaisIgual2500.forEach(pessoa => {
+    console.log(`Nome: ${pessoa.nome}, Idade: ${pessoa.idade}, Salário: ${pessoa.salario}`);
+});
+
+    </script>
+</body>
+</html>

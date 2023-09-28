@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main>
+    <div class="container"></div>
+  </main>
+  
+
+  <script>
+    fetch('https://rickandmortyapi.com/api/character', {
+      method: 'GET'
+    })
+      .then(response => response.json())
+      .then(function (json) {
+        var container = document.querySelector('.container')
+console.log(json)
+const char =json.results;
+        char.map(function (results) {
+const userCard=document.createElement('div')
+userCard.classList.add('user-card')
+          container.innerHTML += `
+<div class="user-card">
+<img src=`+ results.image + `>
+<h2>Nome :`+ results.name + `</h2>
+<h4>id:` + results.id +`</h4>
+<h4>Gender:` + results.gender +`</h4>
+<h4>status:` + results.status +`</h4>
+
+</div>
+
+
+`;
+
+
+
+        })
+      })
+
+
+  </script>
+</body>
+
+</html>

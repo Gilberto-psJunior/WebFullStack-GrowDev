@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <script>
+            function calcularNotas(valor) {
+  const notas = [50, 10, 5, 1]; 
+  const resultado = {}; 
+
+  notas.forEach((nota) => {
+    const quantidade = Math.floor(valor / nota);
+    if (quantidade > 0) {
+      resultado[`GC$${nota},00`] = quantidade;
+      valor %= nota;
+    }
+  });
+
+  return resultado;
+}
+
+
+const valorDesejado = parseInt(prompt("Digite o valor em GrowCoins desejado:"));
+
+
+const notasNecessarias = calcularNotas(valorDesejado);
+
+
+console.log("Exemplo de saída:");
+for (const nota in notasNecessarias) {
+  console.log(`${nota} -> ${notasNecessarias[nota]}`);
+}
+
+        </script>
+    </main>
+</body>
+</html>

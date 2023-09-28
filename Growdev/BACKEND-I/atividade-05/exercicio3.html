@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <main>
+        <script>
+            /*
+         Crie um algoritmo que leia o valor inicial da contagem, o valor final e
+         o incremento, mostrando em seguida todos os valores no intervalo:
+         Ex:
+         Digite o primeiro Valor: 3
+         Digite o último Valor: 10
+         Digite o incremento: 2
+         Contagem: 3 5 7 9 Acabou!
+
+            */
+            let first =Number(prompt("digite primeiro numero"));
+            let last = Number(prompt("digite ultimo numero"));
+            let plus = Number(prompt("digite o incremento"));
+
+            for (let i = first; i <= last; i+=plus) {
+                document.write("<br>"+i);
+                
+            }
+        </script>
+    </main>
+</body>
+</html>

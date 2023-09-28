@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        Desenvolva um algoritmo que preenche um vetor com os 4
+primeiros números perfeitos.
+        */
+        function isPerfectNumber(number) {
+   
+    let sumDivisors = 0;
+    for (let i = 1; i < number; i++) {
+        if (number % i === 0) {
+            sumDivisors += i;
+        }
+    }
+    return sumDivisors === number;
+}
+
+function findPerfectNumbers(count) {
+    
+    const perfectNumbers = [];
+    let number = 2; 
+
+    while (perfectNumbers.length < count) {
+        if (isPerfectNumber(number)) {
+            perfectNumbers.push(number);
+        }
+        number++;
+    }
+
+    return perfectNumbers;
+}
+
+const vetor = findPerfectNumbers(4);
+
+
+console.log(vetor);
+
+
+    </script>
+</body>
+</html>

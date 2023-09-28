@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Controle de presença</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <h1>Controle de presença</h1>
+
+  <ul id="lista-presenca">
+    <li id="aluno-1" class="aluno">Matheus</li>
+    <li id="aluno-2" class="aluno">Maria</li>
+    <li id="aluno-3" class="aluno">
+      <span>Pedro</span>
+    </li>
+  </ul>
+
+  <script>
+    // recebe uma string e retorna o primeiro elemento que corresponde ao seletor especificado
+    let primeiroAluno = document.querySelector('.aluno')
+    console.log(primeiroAluno)
+
+    let alunos = document.querySelector('#lista-presenca')
+    console.log(alunos)
+
+    // retorna uma nodeList (uma lista de elementos) de todos os elementos que correspondem ao seletor especificado.
+    let todosAlunos = document.querySelectorAll('.aluno')
+    console.log(todosAlunos)
+
+    // retorna o elemento que possui o ID especificado. Retorna um único elemento.
+    let aluno3 = document.getElementById('aluno-3').innerHTML
+    // let aluno3 = document.getElementById('aluno-3').innerText
+    console.log(aluno3)
+
+    // retorna uma coleção HTML de elementos (HTMLCollection) que possuem a classe especificada. 
+    let alunosPresentes = document.getElementsByClassName('aluno')
+    // let alunosPresentes = document.getElementsByClassName('aluno')[1]
+    console.log(alunosPresentes)
+
+    //retorna uma coleção HTML de elementos com a tag especificada.
+    let itensLista = document.getElementsByTagName('li')
+    console.log(itensLista)
+
+    // retorna o valor do atributo especificado do elemento. Se não existir, retorna null ou ""
+    // let primeiroAluno = document.querySelector('.aluno') -> peguei da variável lá de cima. 
+    let idDoAluno = primeiroAluno.getAttribute('id')
+    console.log(idDoAluno)
+
+    primeiroAluno.innerText = "José"
+
+    let segundoAluno = document.getElementById('aluno-2')
+    segundoAluno.innerHTML = '<strong>Carla</strong>'
+    console.log(segundoAluno)
+
+    let novoAluno = document.createElement('li')
+    novoAluno.textContent = 'Carlos'
+
+    // adiciona a classe aluno
+    novoAluno.classList.add('aluno')
+
+    let listaPresenca = document.getElementById('lista-presenca')
+    // adiciona um elemento filho
+    listaPresenca.appendChild(novoAluno)
+
+    // remove um elemento filho
+    listaPresenca.removeChild(segundoAluno)
+  </script>
+
+</body>
+
+</html>

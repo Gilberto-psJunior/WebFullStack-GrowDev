@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>function caixaEletronico(saldoInicial) {
+        console.log("Bem-vindo ao caixa eletrônico!");
+        console.log(`Seu saldo atual é de R$${saldoInicial.toFixed(2)}`);
+      
+        const valorSaque = parseInt(prompt("Digite o valor que deseja sacar (múltiplo de 5):"));
+      
+        
+        if (valorSaque <= 0 || valorSaque % 5 !== 0 || valorSaque > saldoInicial) {
+          alert("Valor inválido para saque.");
+        } else {
+          
+          const valorADebitar = valorSaque + 4.50;
+      
+         
+          if (saldoInicial >= valorADebitar) {
+            const saldoFinal = saldoInicial - valorADebitar;
+            alert(`Saque realizado com sucesso! Seu saldo atual é de R$${saldoFinal.toFixed(2)}`);
+          } else {
+            alert("Saldo insuficiente para realizar o saque.");
+          }
+        }
+      }
+      
+      const saldoInicial = 500.00; 
+      caixaEletronico(saldoInicial);</script>
+</body>
+</html>

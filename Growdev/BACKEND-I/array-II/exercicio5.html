@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+/*
+Crie uma função que recebe um vetor de inteiros e um número
+inteiro e retorne verdadeiro se o número faz parte do vetor ou falso
+se não faz parte.
+
+*/
+function verificaNumeroNoVetor(vetor, numero) {
+    return vetor.includes(numero);
+}
+
+// Exemplo de uso
+const vetor = [1, 3, 5, 7, 9];
+const numero = 5;
+
+if (verificaNumeroNoVetor(vetor, numero)) {
+    console.log(`O número ${numero} está no vetor.`);
+} else {
+    console.log(`O número ${numero} não está no vetor.`);
+}
+
+    </script>
+
+    
+</body>
+</html>

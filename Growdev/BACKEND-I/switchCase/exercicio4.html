@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <script>
+        /* O custo de um carro novo ao consumidor é a soma do custo de
+fábrica com a porcentagem do distribuidor e dos impostos
+(aplicados ao custo de fábrica). Supondo que o percentual do
+distribuidor seja de 28% e os impostos de 45%, escrever um
+algoritmo para ler o custo de fábrica de um carro,calcular e escrever
+o custo final ao consumidor.*/
+
+let carroNovo = 0;
+
+let preçoCarro= prompt("digite o custo de fabrica");
+preçoCarro=+preçoCarro;
+let custoDist=parseFloat (preçoCarro/100)*28 ;
+let imposto =parseFloat (preçoCarro/100)*45
+let valorFinal = custoDist+imposto+preçoCarro;
+alert(`o custo de distribuiçao é de : ${custoDist}`);
+alert(`o valor do imposto é de: ${imposto}`);
+alert(`o valor final para o consumidor é de :${valorFinal}`);
+      </script>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+       Crie um cadastro de pessoas onde o usuário informe o nome, idade
+e se está trabalhando ou não, se a pessoa estiver trabalhando pergunte para ele o salário que está ganhando. Para cada pessoa
+cadastrada, pergunte ao usuário se ele deseja continuar
+cadastrando ou não. No final, mostre as pessoas que estão
+desempregadas, as pessoas que estão empregadas separadas
+pelas que ganham mais que 2500 e menos que 2500.
+
+Exemplo de resultado:
+Pessoas desempregadas:
+Nome: Alessandro, Idade: 28
+Nome: Alessandro, Idade: 28
+
+Pessoas empregadas com salários menores que 2500:
+Nome: Alessandro, Idade: 28, Salário: 1500
+Nome: Alessandro, Idade: 28, Salário: 2400
+
+Pessoas empregadas com salários maiores que 2500:
+Nome: Alessandro, Idade: 28, Salário: 2700
+Nome: Alessandro, Idade: 28, Salário: 3000
+        */
+      let contin =1;
+      askAgain=true;
+      const pessoas=[]
+       let pessoa ={};
+while (askAgain==true) {
+    const name=prompt("digite nome");
+        
+        const salario =0;
+        const desempregado =0;
+        const work=prompt("esta trabalhando ´s´ para sim e'n' para não")
+        if (work=="s") {
+            const salario=prompt("digite salario");
+            pessoa.salario=salario;
+            pessoa.nome=name;
+        }
+        else {
+          
+          salario=0;
+          pessoa.nome=name;
+        }
+       pessoas.push(pessoa)
+       
+
+        const resp=prompt("deseja continuar? s para sim e n para não")
+    if (resp == 1){
+        askAgain = true;
+    } else {
+        askAgain = false;
+    }
+    
+    console.log(pessoas);
+    
+    
+}
+let desempregados=pessoas.filter((pessoa)=>{pessoa.salario >0});
+  desempregados.forEach((pessoa)=>{
+    console.log(`${pessoa.nome}`)
+  })      
+    
+    </script>
+</body>
+</html>

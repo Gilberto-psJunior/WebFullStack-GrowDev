@@ -1,0 +1,75 @@
+h2{
+    color: white;
+}
+p{
+    color: white;
+}
+main{
+   
+    text-align: center;
+}
+
+.imagem{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+footer{
+    text-align: center;
+}
+a{ font-family: sans-serif;
+    color: white;
+    text-decoration: none;
+    padding-right: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+a:hover
+{
+    scale: 1.2;
+    transition: 0.3s;
+    color: red;
+    font-weight: bold;
+    
+}
+hr{height: 50%;
+    width: 94%;
+
+}
+.fundo{
+    background-image: linear-gradient(to bottom ,rgba(75, 2, 75, 0.678),black);
+}
+
+h3{
+    color: white;
+}
+li{color: springgreen;
+text-align: center;}
+ul{
+    text-align: center;
+}
+.lista{
+    display: flex;
+    justify-content: center;
+}
+
+nav{
+    display: flex;
+    justify-content: end;
+}
+.imga{
+    width: 40rem;
+}
+#grow{
+  width: 15rem;
+
+}
+.inc{
+    display: flex;
+    justify-content: center;
+}
+li:hover{
+    font-weight: bolder;
+color: rgba(15, 192, 192, 0.623);
+
+text-shadow: 0 0 30px greenyellow; 
+}

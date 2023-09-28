@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <script>
+            /* Faça um algoritmo que pergunte a distância que um passageiro
+                deseja percorrer em Km. Calcule o preço da passagem, cobrando
+                R$0.50 por Km para viagens até 200Km e R$0.45 para viagens mais
+                 longas.
+                */
+
+            const userKm = Number(prompt("digite o km a ser percorrido"));
+            smallPass = 0.50 * userKm;
+            largerPass = 0.45 * userKm;
+if (userKm <= 200) {
+document.write(`o valor de sua passagem é ${smallPass}R$`)
+    
+}
+else {
+    document.write(`O valor de sua passagem é ${largerPass}R$`)
+}
+        </script>
+    </main>
+</body>
+
+</html>

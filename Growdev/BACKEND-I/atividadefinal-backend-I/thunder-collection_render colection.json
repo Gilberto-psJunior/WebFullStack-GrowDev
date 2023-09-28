@@ -1,0 +1,113 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "render colection",
+    "dateExported": "2023-08-29T00:42:38.909Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "7324b91b-5a10-4061-be0a-67e228ac2959",
+            "colId": "4fe5e965-af61-4263-927a-109c5b45ca4d",
+            "containerId": "",
+            "name": "Cadastrando usuario",
+            "url": "https://trabalho-final-modulo-backend-i.onrender.com/signup",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-08-25T01:21:39.949Z",
+            "modified": "2023-08-25T01:41:07.254Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \n  \n  \"name\":\"Peter Parker\",\n  \"email\":\"spider@dev.com\",\n  \"password\":\"1234\"\n}\n  \n\n\n",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "04777bff-e425-40c8-835d-739a0fa423b0",
+            "colId": "4fe5e965-af61-4263-927a-109c5b45ca4d",
+            "containerId": "",
+            "name": "Efetuando login",
+            "url": "https://trabalho-final-modulo-backend-i.onrender.com/login",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-08-25T01:27:41.366Z",
+            "modified": "2023-08-25T01:41:22.045Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "\n  {\n  \"name\":\"Peter Parker\",\n  \"email\":\"spider@dev.com\",\n  \"password\":\"1234\"\n}\n",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "bbc6b9c2-32ca-48cb-a0a8-abbc4fd05160",
+            "colId": "4fe5e965-af61-4263-927a-109c5b45ca4d",
+            "containerId": "",
+            "name": "Criando recado",
+            "url": "https://trabalho-final-modulo-backend-i.onrender.com/messages",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-08-25T01:32:15.390Z",
+            "modified": "2023-08-29T00:33:22.227Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"Growdev\",\n  \"description\": \"best course ever!\",\n  \"userId\": \"7475746b-6c45-461b-8975-b6bbf387da4b\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "cab0d589-ef26-4b6e-8ec3-3cabcc4bc3c3",
+            "colId": "4fe5e965-af61-4263-927a-109c5b45ca4d",
+            "containerId": "",
+            "name": "Listando recados",
+            "url": "https://trabalho-final-modulo-backend-i.onrender.com/messages/7475746b-6c45-461b-8975-b6bbf387da4b",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2023-08-25T01:35:16.878Z",
+            "modified": "2023-08-29T00:33:52.584Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "6b433516-74dc-4dd5-ad3b-cafa816d73ee",
+            "colId": "4fe5e965-af61-4263-927a-109c5b45ca4d",
+            "containerId": "",
+            "name": "atualizando recados",
+            "url": "https://trabalho-final-modulo-backend-i.onrender.com/messages/b1101eb4-df07-4ade-80f7-41c61e813d24",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2023-08-25T01:36:21.327Z",
+            "modified": "2023-08-29T00:35:36.963Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"Carla\",\n  \"description\": \"Best teacher ever!\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "ae3cba26-8588-4885-ace2-bcb1653324af",
+            "colId": "4fe5e965-af61-4263-927a-109c5b45ca4d",
+            "containerId": "",
+            "name": "Deletando recados",
+            "url": "https://trabalho-final-modulo-backend-i.onrender.com/messages/b1101eb4-df07-4ade-80f7-41c61e813d24",
+            "method": "DELETE",
+            "sortNum": 60000,
+            "created": "2023-08-25T01:38:24.807Z",
+            "modified": "2023-08-29T00:35:48.380Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

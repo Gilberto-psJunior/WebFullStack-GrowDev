@@ -1,0 +1,113 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "WorkCollection",
+    "dateExported": "2023-08-24T23:30:41.913Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "600f655f-6b1b-4a04-97bf-7094bb880136",
+            "colId": "8721a328-6d3a-41d2-9ee0-038760483db9",
+            "containerId": "",
+            "name": "UserCreate",
+            "url": "localhost:8080/signup",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-08-24T23:15:20.607Z",
+            "modified": "2023-08-24T23:20:19.636Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Lance\",\n  \"email\": \"lance@dev.com\",\n  \"password\": \"1234\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "158514d7-f43b-40d6-86a7-38f5c41bfa50",
+            "colId": "8721a328-6d3a-41d2-9ee0-038760483db9",
+            "containerId": "",
+            "name": "Login",
+            "url": "localhost:8080/login",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-08-24T23:15:20.608Z",
+            "modified": "2023-08-24T23:22:29.997Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"lance@dev.com\",\n  \"password\": \"1234\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "4c388933-b44b-4d73-9ca3-cf228f52233d",
+            "colId": "8721a328-6d3a-41d2-9ee0-038760483db9",
+            "containerId": "",
+            "name": "creating messages",
+            "url": "localhost:8080/messages",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-08-24T23:15:20.609Z",
+            "modified": "2023-08-24T23:23:39.432Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"Growdev\",\n  \"description\": \"best course ever!\",\n  \"userId\": \"2084b7e6-f131-461d-8b4f-1531aef6ee5f\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "38442e7f-7d4d-4084-b053-c2f4e41969c4",
+            "colId": "8721a328-6d3a-41d2-9ee0-038760483db9",
+            "containerId": "",
+            "name": "list messages",
+            "url": "localhost:8080/messages/2084b7e6-f131-461d-8b4f-1531aef6ee5f",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2023-08-24T23:15:20.610Z",
+            "modified": "2023-08-24T23:29:43.375Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "7c0fa839-deb5-4bb0-ae27-bb70bd4c54e2",
+            "colId": "8721a328-6d3a-41d2-9ee0-038760483db9",
+            "containerId": "",
+            "name": "messages update",
+            "url": "localhost:8080/messages/20c1195e-1bff-4e0b-a581-2ab05bbcec69",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2023-08-24T23:15:20.611Z",
+            "modified": "2023-08-24T23:30:04.420Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"Carla\",\n  \"description\": \"Best teacher ever!\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "fe234895-1ffa-4aa5-99da-05725d835ca4",
+            "colId": "8721a328-6d3a-41d2-9ee0-038760483db9",
+            "containerId": "",
+            "name": "deleting messages",
+            "url": "localhost:8080/messages/20c1195e-1bff-4e0b-a581-2ab05bbcec69",
+            "method": "DELETE",
+            "sortNum": 60000,
+            "created": "2023-08-24T23:15:20.612Z",
+            "modified": "2023-08-24T23:30:27.170Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <script>
+            let salario=0;
+            let salaryW =0;
+            let salaryM =0;
+        do {
+            let sex=prompt("sexo:m para masculino ,f para feminino");
+            let salario = prompt("digite salario");
+            if (sex=="m") {
+                salaryM += salario
+
+
+            }
+            else if (sex=="W"){
+                salaryW+=salario
+            }
+            
+
+
+        }
+        
+        while(confirm("deseja continuar"));
+        console.log(salaryM,salaryW)
+      </script>
+    </main>
+  </body>
+</html>

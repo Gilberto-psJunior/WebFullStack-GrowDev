@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+    <script>
+let countAges=0;
+let mediaAges=0;
+let greater21 =0;
+let stopexec=0;
+let totalAges=0;
+do { 
+    let ages =prompt(Number("digite uma idade"));
+    countAges++
+   mediaAges+= ages/countAges
+    if ((Number(ages))>=21) {
+        greater21++
+        
+    }
+
+    
+const stopsystem=prompt("deseja parar a execuçao ? se sim digite 1 se nao digite 0");
+if (stopsystem==1) {
+    stopexec=1;
+    
+}
+
+} while ( stopexec==0);
+
+console.log("digitadas",countAges)
+console.log("mais de 21",greater21)
+console.log(mediaAges)
+
+
+
+
+    </script>    
+    </main>
+</body>
+</html>

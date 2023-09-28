@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+
+
+function determinarCategoria(idade, peso) {
+    switch (true) {
+      case idade <= 12:
+        return "Infantil";
+      case idade >= 13 && idade <= 16:
+        return peso <= 40 ? "Juvenil leve" : "Juvenil pesado";
+      case idade >= 17 && idade <= 24:
+        if (peso <= 45) {
+          return "Sênior leve";
+        } else if (peso <= 60) {
+          return "Sênior médio";
+        } else {
+          return "Categoria não encontrada para essa idade e peso.";
+        }
+      default:
+        return "Categoria não encontrada para essa idade.";
+    }
+  }
+  
+  
+  const dade = Number (prompt());
+  const peso =Number (prompt());
+  const categoria = determinarCategoria(idade, peso);
+  alert("Categoria do atleta:", categoria);
+
+
+
+
+        </script>
+</body>
+</html>

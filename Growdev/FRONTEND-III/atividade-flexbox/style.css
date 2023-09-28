@@ -1,0 +1,61 @@
+.blueball{
+    border-radius: 90%;
+    height: 50px;
+    width: 50px;
+    background-color: blue;
+}
+.yeallowball{
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    background-color: rgb(212, 255, 0);
+}
+.first{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50vh;
+
+}
+.second{
+    display: flex;
+ 
+ flex-direction: column-reverse;
+ align-items: end;
+ justify-content: space-between;
+  
+  
+    height: 50vh;
+}
+.blueball2{
+    
+    border-radius: 0%;
+    height: 50px;
+    margin-bottom: -45px;
+   
+    width: 50px;
+    background-color: blue;
+}
+.blueball3{
+    border-radius: 0%;
+    height: 50px;
+    width: 50px;
+    background-color: blue;
+}
+.yeallowball2{
+    
+  align-self: flex-start;
+  
+   
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    
+    background-color: rgb(212, 255, 0);
+    
+
+}
+.squareball{
+    display: flex;
+   
+}

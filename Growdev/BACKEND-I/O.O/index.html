@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gerenciamento de Salários</title>
+    <style>
+        /* Estilos (mantive os estilos anteriores) */
+        .employee {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 400px;
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Gerenciamento de Salários</h1>
+    
+    <form id="addForm">
+        <input type="text" id="name" placeholder="Nome do Funcionário" required>
+        <input type="number" id="salary" placeholder="Salário" required>
+        <button type="submit">Adicionar</button>
+    </form>
+    
+    <div id="employeeList">
+        <!-- Lista de funcionários será exibida aqui -->
+    </div>
+    
+    <p id="totalSalary">Total dos Salários: R$ 0.00</p>
+    
+    <script>
+        const addForm = document.getElementById('addForm');
+        const employeeList = document.getElementById('employeeList');
+        const totalSalaryElement = document.getElementById('totalSalary');
+        
+        const employees = [];
+        
+        addForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const salary = parseFloat(document.getElementById('salary').value);
+            
+            employees.push({ name, salary });
+            employees.sort((a, b) => b.salary - a.salary);
+            
+            updateEmployeeList();
+            updateTotalSalary();
+            
+            addForm.reset();
+        });
+        
+        function updateEmployeeList() {
+            employeeList.innerHTML = '';
+            
+            employees.forEach((employee, index) => {
+                const item = document.createElement('div');
+                item.classList.add('employee'); // Adiciona a classe CSS
+                item.innerHTML = `
+                    <p>${employee.name}</p>
+                    <p>R$ ${employee.salary.toFixed(2)}</p>
+                    <div>
+                        <button onclick="editEmployee(${index})">Editar</button>
+                        <button onclick="deleteEmployee(${index})">Apagar</button>
+                    </div>
+                `;
+                employeeList.appendChild(item);
+            });
+        }
+        
+        function editEmployee(index) {
+            const newName = prompt('Digite o novo nome do funcionário:', employees[index].name);
+            const newSalary = parseFloat(prompt('Digite o novo salário:', employees[index].salary));
+            
+            employees[index].name = newName;
+            employees[index].salary = newSalary;
+            employees.sort((a, b) => b.salary - a.salary);
+            
+            updateEmployeeList();
+            updateTotalSalary();
+        }
+        
+        function deleteEmployee(index) {
+            employees.splice(index, 1);
+            updateEmployeeList();
+            updateTotalSalary();
+        }
+        
+        // Inicializar a lista
+        updateEmployeeList();
+        updateTotalSalary();
+    </script>
+</body>
+</html>
