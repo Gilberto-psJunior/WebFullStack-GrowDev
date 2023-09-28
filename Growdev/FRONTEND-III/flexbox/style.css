@@ -64,8 +64,10 @@ body {
     }
 }
 
-/* #footer {
-} */
+ #footer {
+    display: flex;
+    justify-content: space-between;
+} 
 #buttons{
     display: flex;
     justify-content: end;
@@ -74,10 +76,29 @@ body {
 
    
 }
+.profile-thumbnail{
+    animation: pulse 2s infinite;
+ 
+}
+@keyframes pulse {
+	0% {
+		transform: scale(1);
+		
+	}
 
+	70% {
+		transform: scale(1.2);
+		
+	}
+
+	100% {
+		transform: scale(1);
+		
+	}
+}
 #footer #stats {
     font-size: 15px;
-    
+
 }
 
 #footer #stats strong {
