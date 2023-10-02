@@ -1,0 +1,43 @@
+.element {
+  width: 100px;
+  height: 50px;
+  background-color: blueviolet;
+  animation: move 5s infinite;
+  /* animation-timing-function: linear; */
+  position: relative;
+}
+
+.um {
+  animation-timing-function: linear;
+}
+
+
+.dois {
+  animation-timing-function: ease;
+}
+
+.tres {
+  animation-timing-function: ease-in;
+}
+
+.quatro {
+  animation-timing-function: ease-out;
+}
+
+.cinco {
+  animation-timing-function: ease-in-out;
+}
+
+.seis {
+  animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+@keyframes move {
+  from {
+    left: 0
+  }
+
+  to {
+    left: 300px;
+  }
+}

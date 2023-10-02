@@ -1,0 +1,28 @@
+.box {
+  width: 50px;
+  height: 50px;
+  background-color: aqua;
+  /* animation-name: move-right;
+  animation-duration: 2s;
+  animation-iteration-count: infinite; */
+  animation: move-right 2s infinite;
+}
+
+@keyframes move-right {
+
+  /* estado inicial da animação */
+  from {
+    transform: translateX(0);
+    opacity: 0;
+  }
+
+  /* estado final da animação*/
+  to {
+    transform: translateX(100px);
+    opacity: 1;
+  }
+}
+
+body {
+  width: 100vw;
+}

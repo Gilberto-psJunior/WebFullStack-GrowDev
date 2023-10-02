@@ -1,0 +1,93 @@
+body{
+    text-decoration: none;
+}
+
+.square1{
+    
+    height: 100px;
+    width: 100px;
+    background-color: black;
+    position: relative;
+  
+    animation: move 4s infinite 2s ease ;
+}
+.main{
+   display: flex;
+   height: 80vh;
+   justify-content: center;
+   align-items: center;
+}
+
+    .square2{
+        height: 100px;
+        width: 100px;
+        background-color: black;
+        position: relative;
+        animation: move 4s infinite ease ;
+    }
+    @keyframes move {
+0%{
+    background-color: red;
+    left: 0;
+    top: 0;
+
+}
+25%{
+    background-color: yellow;
+
+    left: 200px;
+    top: 0;
+    
+
+}
+
+50%{
+background-color: aqua;
+   left: 200px;
+top: 200px;
+    
+}
+
+75%{
+    left: -100px;
+    top: 200px;
+    background-color: blueviolet;
+}
+
+
+100%{
+    left: -100px;
+    top: -60px;
+    
+}    
+
+}
+
+header{
+    font-size: 50px;
+    text-align: center;
+    animation: letter 5s infinite ease;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    
+}
+
+@keyframes letter {
+    0%{
+        color: white;
+        scale: 1;
+    }
+   75%{
+    color: red;
+   }
+    100%{
+        color: yellow;
+        scale: 1.2;
+    }
+}
+
+header:hover{
+    transition: color 5s ease;
+    color: purple;
+    
+}

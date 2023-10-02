@@ -1,0 +1,27 @@
+.element {
+  width: 100px;
+  height: 100px;
+  background-color: blueviolet;
+  opacity: 0;
+  /* animation-duration: 3s;
+  animation-name: fadeInAndMove;
+  animation-iteration-count: infinite; */
+  animation: fadeInAndMove 3s infinite;
+}
+
+@keyframes fadeInAndMove {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(100px);
+  }
+}

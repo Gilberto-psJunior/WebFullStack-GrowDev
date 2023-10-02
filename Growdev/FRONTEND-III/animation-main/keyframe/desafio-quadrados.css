@@ -1,0 +1,54 @@
+.box1 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+
+  animation-name: move;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  /* float: left; */
+}
+
+.box2 {
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  position: relative;
+
+  animation-name: move;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-delay: 2s;
+}
+
+@keyframes move {
+  0% {
+    background-color: red;
+    left: 0;
+    top: 0;
+  }
+
+  25% {
+    background-color: yellow;
+    left: 200px;
+    top: 0;
+  }
+
+  50% {
+    left: 200px;
+    top: 200px;
+  }
+
+  75% {
+    background-color: blue;
+    left: 0;
+    top: 200px;
+  }
+
+  100% {
+    background-color: green;
+    left: 0;
+    top: 0;
+  }
+}
