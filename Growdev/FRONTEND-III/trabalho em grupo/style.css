@@ -5,3 +5,28 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
 }
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: hide 2s ease ;
+}
+.tittle{
+    
+}
+
+@keyframes hide {
+  from{
+    margin-left: 100%;
+    
+    opacity:0%;
+  }
+  to{
+    margin-left: 20%;
+    width: 100%;
+opacity: 100%;
+  }
+
+}
