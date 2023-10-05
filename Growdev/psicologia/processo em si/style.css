@@ -1,0 +1,20 @@
+.row{
+    height: 100vh;
+}
+inmage{
+    height: 80px;
+}
+body{
+    height: 800px;
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(237,243,244,1) 100%);
+}
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    height: 100px;
+    width: 100px;
+    outline: black;
+    background-color: rgba(0, 0, 0, 0.608);
+    background-size: 100%, 100%;
+    border-radius: 50%;
+    border: 1px solid black;
+}
