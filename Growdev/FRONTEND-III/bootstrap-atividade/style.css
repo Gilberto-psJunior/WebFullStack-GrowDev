@@ -53,3 +53,16 @@ img{
 email{
     color: blueviolet;
 }
+a.icon{
+    height: 60px;
+    width: 80px;
+    border-radius: 100%;
+    line-height: 50px;
+    text-decoration: none;
+    text-align: center;
+    background-color:#000;
+    color: white ;
+    border: 2px solid #6A5ACD;
+    font-size: 30px;
+    
+}
