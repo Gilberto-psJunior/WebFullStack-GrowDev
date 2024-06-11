@@ -1,7 +1,7 @@
 {
   "name": "intro-prisma",
   "version": "1.0.0",
-  "description": "",
+  "description": "1. **Iniciar um projeto node**",
   "main": "index.js",
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only ./src"
@@ -12,10 +12,10 @@
   "devDependencies": {
     "@types/cors": "^2.8.17",
     "@types/express": "^4.17.21",
-    "@types/node": "^20.11.16",
+    "@types/node": "^20.14.2",
     "prisma": "^5.9.1",
     "ts-node-dev": "^2.0.0",
-    "typescript": "^5.3.3"
+    "typescript": "^5.4.5"
   },
   "dependencies": {
     "@prisma/client": "^5.9.1",
