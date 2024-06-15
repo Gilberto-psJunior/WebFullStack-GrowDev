@@ -1,0 +1,54 @@
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Users {
+id String @id @db.Uuid @default(uuid())
+name String @db.VarChar(255)
+age Int @db.SmallInt 
+email String @db.VarChar(255) @unique
+password String @db.Text
+  @@map("users")
+}
+
+model Products {
+ id String @id @db.Uuid @default(uuid())
+ description String @db.Text
+
+ value Int @db.Integer
+ quantity Int @db.Integer
+ ProductType String @db.Text @map("product_type")
+
+ CreatedAt DateTime @db.Timestamp() @map("created_at")
+ disponibility String @db.Text 
+
+}
+
+model Store {
+cnpj String @id @db.Uuid @default(uuid())
+name String @db.Text
+address String @db.Text
+phoneNumber Int @db.Integer @map("phone_number")
+branchsQuantity Int @db.Integer
+OpenTime DateTime @db.Time
+
+}
+
+
+model Supplier{
+id String @id @db.Uuid @default(uuid())
+ name String @db.Text
+email String @db.Text
+evaluation  Int @db.Integer
+ creationDate  DateTime @db.Timestamp @default(now()) @map("creation_date")
+ update_date DateTime @db.Date  @default(now())
+}
+
+
+
