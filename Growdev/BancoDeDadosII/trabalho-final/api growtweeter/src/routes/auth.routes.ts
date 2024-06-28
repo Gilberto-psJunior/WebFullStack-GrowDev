@@ -1,13 +1,13 @@
 import { Router } from "express";
-import { AuthMiddleware } from "../middleware/auth/auth.middleware";
+import { LoginMiddleware } from "../middleware/auth/signin.middleware";
 import { AuthController } from "../controllers/auth.controller";
 
 export class AuthRoutes {
   public static execute(): Router {
     const router = Router();
 
-    router.post("/login", [AuthMiddleware.validate],AuthController.signin);
-    router.post("/logout", []);
+    router.post("/login", [LoginMiddleware.validate],AuthController.signin);
+    router.post("/logout",AuthController.logout);
 
     return router;
   }

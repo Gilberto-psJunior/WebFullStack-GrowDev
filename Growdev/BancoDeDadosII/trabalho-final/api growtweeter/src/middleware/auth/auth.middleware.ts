@@ -1,19 +1,33 @@
 import { NextFunction, Request, Response } from "express";
+import { prismaConnection } from "../../database/prisma.connection";
 
 export class AuthMiddleware {
-  public static validate(req: Request, res: Response, next: NextFunction) {
-    const { email, password } = req.body;
+  public static async validate(
+    req: Request,
+    res: Response,
+    next: NextFunction
+  ) {
+    const headers = req.headers;
 
-    if (!email || typeof email !== "string" || !email.includes("@")) {
-      return res.status(400).json({ error: "Email inválido" });
-    }
-
-    if (!password || typeof password !== "string" ) {
-      return res.status(400).json({
+    if (!headers.authorization) {
+      return res.status(401).json({
         ok: false,
-        message: "informe uma senha no formato de caracteres correto",
+        message: "Token é obrigatório",
       });
     }
+
+    const userFound = await prismaConnection.user.findFirst({
+      where: { authToken: headers.authorization },
+    });
+
+    if (!userFound) {
+      return res.status(401).json({
+        ok: false,
+        message: "Usuário não autorizado",
+      });
+    }
+
+    req.body.user = userFound;
 
     return next();
   }

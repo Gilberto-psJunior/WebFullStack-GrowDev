@@ -52,4 +52,42 @@ export class AuthController {
       });
     }
   }
+
+
+
+public static async logout(req: Request, res: Response) {
+  try {
+    const headers = req.headers;
+
+    if (!headers.authorization) {
+      return res.status(401).json({
+        ok: false,
+        message: "Token é obrigatório",
+      });
+    }      
+
+    console.log(headers.authorization);
+
+    
+    await prismaConnection.user.updateMany({
+      where: {
+          authToken: headers.authorization
+      },
+      data: { authToken: null }
+  });
+
+    return res.status(200).json({
+      ok: true,
+      message: "Logout realizado com sucesso",
+    });
+
+  } catch (err) {
+    return res.status(500).json({
+      ok: false,
+      message: `Ocorreu um erro inesperado. Erro: ${(err as Error).name} - ${
+        (err as Error).message
+      }`,
+    });
+  }
+}
 }
