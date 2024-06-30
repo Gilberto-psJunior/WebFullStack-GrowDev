@@ -1,7 +1,7 @@
+-- CreateEnum
+CREATE TYPE "TweetType" AS ENUM ('T', 'R');
 
-CREATE TYPE "TweetType" AS ENUM ('R', 'N');
-
-
+-- CreateTable
 CREATE TABLE "users" (
     "id" UUID NOT NULL,
     "name" VARCHAR(255) NOT NULL,
@@ -16,11 +16,11 @@ CREATE TABLE "users" (
     CONSTRAINT "users_pkey" PRIMARY KEY ("id")
 );
 
-
+-- CreateTable
 CREATE TABLE "tweets" (
     "id" UUID NOT NULL,
     "content" VARCHAR(255) NOT NULL,
-    "type" "TweetType" NOT NULL DEFAULT 'N',
+    "type" "TweetType" NOT NULL DEFAULT 'T',
     "user_id" UUID NOT NULL,
     "criado_em" TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "deleted" BOOLEAN NOT NULL DEFAULT false,
@@ -29,11 +29,11 @@ CREATE TABLE "tweets" (
     CONSTRAINT "tweets_pkey" PRIMARY KEY ("id")
 );
 
-
+-- CreateIndex
 CREATE UNIQUE INDEX "users_email_key" ON "users"("email");
 
-
+-- CreateIndex
 CREATE UNIQUE INDEX "users_username_key" ON "users"("username");
 
-
+-- AddForeignKey
 ALTER TABLE "tweets" ADD CONSTRAINT "tweets_user_id_fkey" FOREIGN KEY ("user_id") REFERENCES "users"("id") ON DELETE RESTRICT ON UPDATE CASCADE;

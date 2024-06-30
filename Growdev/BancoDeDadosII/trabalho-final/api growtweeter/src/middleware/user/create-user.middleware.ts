@@ -14,7 +14,7 @@ if (!email || typeof email !=='string' ||!email.includes('@'))  {
     return res.status(400).json({error: 'Email inválido'});
 }
 
-if (password || typeof password !=='string'||password.length <6) {
+if (!password || typeof password !=='string'||password.length <6) {
     return res.status(400).json({
       ok: false,
       message:

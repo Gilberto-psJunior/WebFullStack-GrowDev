@@ -73,7 +73,7 @@ export class UserController{
               limit: limitDefault,
               page: pageDefault,
               count: count,
-              totalPages: Math.ceil(count / limitDefault), // para arendondar para cima
+              totalPages: Math.ceil(count / limitDefault), 
             },
           });
         } catch (err) {

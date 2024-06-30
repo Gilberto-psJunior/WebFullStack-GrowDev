@@ -3,7 +3,7 @@ import express from 'express';
 import 'dotenv/config';
 import { UserRoutes } from './routes/user.routes';
 import {AuthRoutes} from './routes/auth.routes';
-
+import { TweetRoutes } from './routes/tweets.router';
 const app = express();
 app.use(express.json());
 app.use(cors());
@@ -16,6 +16,7 @@ res.status(200).json({message:"hello world!",
 })
 app.use("/user",UserRoutes.execute());
 app.use("/auth",AuthRoutes.execute());
+app.use("/tweet", TweetRoutes.execute());
 
 
 
