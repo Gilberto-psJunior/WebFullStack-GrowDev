@@ -8,8 +8,6 @@ export class LikeController {
       const { tweetId } = req.params;
       const { user } = req.body;
 
-   
-
       const tweetFound = await prismaConnection.tweet.findFirst({
         where: { id: tweetId },
       });
@@ -48,9 +46,8 @@ export class LikeController {
           ok: true,
           message: "Like removido com sucesso",
           tweetLiked,
-          totalLikes: countLiked - 1
+          totalLikes: countLiked - 1,
         });
-        
       } else {
         const tweetLiked = await prismaConnection.like.create({
           data: {
@@ -63,10 +60,9 @@ export class LikeController {
           ok: true,
           message: "Like concluido com sucesso",
           tweetLiked,
-          totalLikes: countLiked + 1
+          totalLikes: countLiked + 1,
         });
       }
-
     } catch (err) {
       return res.status(500).json({
         ok: false,

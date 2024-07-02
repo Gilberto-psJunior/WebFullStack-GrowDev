@@ -1,4 +1,4 @@
-import {  Request, Response } from "express";
+import { Request, Response } from "express";
 import { prismaConnection } from "../database/prisma.connection";
 import { User } from "@prisma/client";
 
@@ -52,7 +52,9 @@ export class TweetController {
     } catch (err) {
       return res.status(500).json({
         ok: false,
-        message: "Internal server error.",
+        message: `Ocorreu um erro inesperado. Erro: ${(err as Error).name} - ${
+          (err as Error).message
+        }`,
       });
     }
   }

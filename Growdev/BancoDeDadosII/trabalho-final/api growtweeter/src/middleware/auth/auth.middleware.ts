@@ -23,7 +23,7 @@ export class AuthMiddleware {
     if (!userFound) {
       return res.status(401).json({
         ok: false,
-        message: "Usuário não autorizado",
+        message: `Usuário não autorizado ${userFound}`,
       });
     }
 
